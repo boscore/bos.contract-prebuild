@@ -1,4 +1,5 @@
-# bos-contract.abi
-Compiled,include abi and wasm
+# bos.contract-prebuild
 
-- In order to provide convenience to developers,we offer our  abi and wasm file,you can use directly 
+### This repository contains every bos.contract prebuild version, so you can just download the specail tag version and use for what you want. 
+### Every release of bos.contract will be taged in this repository.
+
