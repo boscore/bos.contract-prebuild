@@ -16,6 +16,7 @@ NEED_DEL_ITEMS=(
     "*/CMakeFiles"
     "*/Makefile"
     "*/*.cmake"
+    "contracts_unit_tests-prefix"
 )
 for item in ${NEED_DEL_ITEMS[*]}
 do 
