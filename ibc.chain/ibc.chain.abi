@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Jan  8 23:52:03 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Jan 10 14:59:09 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -84,7 +84,7 @@
             "fields": [
                 {
                     "name": "block_num",
-                    "type": "uint32"
+                    "type": "uint64"
                 },
                 {
                     "name": "merkle",
@@ -241,6 +241,26 @@
             ]
         },
         {
+            "name": "rmfirstsctn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "relay",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "rminvalidls",
+            "base": "",
+            "fields": [
+                {
+                    "name": "relay",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "section_type",
             "base": "",
             "fields": [
@@ -342,6 +362,16 @@
         {
             "name": "relay",
             "type": "relay",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmfirstsctn",
+            "type": "rmfirstsctn",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rminvalidls",
+            "type": "rminvalidls",
             "ricardian_contract": ""
         },
         {

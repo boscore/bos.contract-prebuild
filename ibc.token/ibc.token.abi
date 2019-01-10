@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Jan  8 23:52:13 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Jan 10 14:59:17 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -361,6 +361,48 @@
             ]
         },
         {
+            "name": "deleted_unrollbackable_trx_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                }
+            ]
+        },
+        {
+            "name": "fcrmorigtrx",
+            "base": "",
+            "fields": [
+                {
+                    "name": "trxs",
+                    "type": "transaction_id_type[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "fcrollback",
+            "base": "",
+            "fields": [
+                {
+                    "name": "trxs",
+                    "type": "transaction_id_type[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "name": "global_mutable",
             "base": "",
             "fields": [
@@ -369,7 +411,7 @@
                     "type": "uint64"
                 },
                 {
-                    "name": "last_finished_trx_block_time_slot",
+                    "name": "last_confirmed_orig_trx_block_time_slot",
                     "type": "uint32"
                 },
                 {
@@ -391,7 +433,7 @@
             "base": "",
             "fields": [
                 {
-                    "name": "ibc_contract",
+                    "name": "ibc_chain_contract",
                     "type": "name"
                 },
                 {
@@ -574,12 +616,35 @@
             ]
         },
         {
+            "name": "rmtmplock",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "rmunablerb",
+            "base": "",
+            "fields": [
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "relay",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "rollback",
             "base": "",
             "fields": [
                 {
-                    "name": "trxs",
-                    "type": "transaction_id_type[]"
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "relay",
+                    "type": "name"
                 }
             ]
         },
@@ -682,7 +747,7 @@
             "base": "",
             "fields": [
                 {
-                    "name": "ibc_contract",
+                    "name": "ibc_chain_contract",
                     "type": "name"
                 },
                 {
@@ -757,20 +822,6 @@
                 },
                 {
                     "name": "value",
-                    "type": "uint64"
-                }
-            ]
-        },
-        {
-            "name": "test",
-            "base": "",
-            "fields": [
-                {
-                    "name": "who",
-                    "type": "name"
-                },
-                {
-                    "name": "id",
                     "type": "uint64"
                 }
             ]
@@ -909,6 +960,16 @@
             "ricardian_contract": ""
         },
         {
+            "name": "fcrmorigtrx",
+            "type": "fcrmorigtrx",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "fcrollback",
+            "type": "fcrollback",
+            "ricardian_contract": ""
+        },
+        {
             "name": "lockall",
             "type": "lockall",
             "ricardian_contract": ""
@@ -926,6 +987,16 @@
         {
             "name": "regpegtoken",
             "type": "regpegtoken",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmtmplock",
+            "type": "rmtmplock",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmunablerb",
+            "type": "rmunablerb",
             "ricardian_contract": ""
         },
         {
@@ -976,11 +1047,6 @@
         {
             "name": "setpegint",
             "type": "setpegint",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "test",
-            "type": "test",
             "ricardian_contract": ""
         },
         {
@@ -1050,6 +1116,13 @@
         {
             "name": "origtrxs",
             "type": "original_trx_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "rmdunrbs",
+            "type": "deleted_unrollbackable_trx_info",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
