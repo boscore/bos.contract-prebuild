@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Jan 10 14:59:13 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Sun Jan 13 15:55:34 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -821,6 +821,48 @@
             ]
         },
         {
+            "name": "setacctcpu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "cpu_weight",
+                    "type": "int64?"
+                }
+            ]
+        },
+        {
+            "name": "setacctnet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "net_weight",
+                    "type": "int64?"
+                }
+            ]
+        },
+        {
+            "name": "setacctram",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "ram_bytes",
+                    "type": "int64?"
+                }
+            ]
+        },
+        {
             "name": "setalimits",
             "base": "",
             "fields": [
@@ -1081,7 +1123,7 @@
                     "type": "bool"
                 },
                 {
-                    "name": "reserved1",
+                    "name": "flags1",
                     "type": "uint32"
                 },
                 {
@@ -1209,6 +1251,21 @@
         {
             "name": "setabi",
             "type": "setabi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setacctcpu",
+            "type": "setacctcpu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setacctnet",
+            "type": "setacctnet",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setacctram",
+            "type": "setacctram",
             "ricardian_contract": ""
         },
         {
