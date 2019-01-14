@@ -1,0 +1,949 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Jan 14 14:27:56 2019",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "account_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "addr_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "state",
+                    "type": "uint64"
+                },
+                {
+                    "name": "assign_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "create_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "applicant_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "applicant",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "applyaddr",
+            "base": "",
+            "fields": [
+                {
+                    "name": "applicant",
+                    "type": "name"
+                },
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "approve",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "assignaddr",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "auditor_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "auditor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "clear",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "num",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "acceptor",
+                    "type": "name"
+                },
+                {
+                    "name": "address_style",
+                    "type": "name"
+                },
+                {
+                    "name": "organization",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "deposit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "deposit_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "string"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "state",
+                    "type": "uint64"
+                },
+                {
+                    "name": "remote_trx_id",
+                    "type": "string"
+                },
+                {
+                    "name": "msg",
+                    "type": "string"
+                },
+                {
+                    "name": "create_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "feedback",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "remote_trx_id",
+                    "type": "string"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "issue",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "lockall",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "operate_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "type",
+                    "type": "uint64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                },
+                {
+                    "name": "operate_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "retire",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "rmwithdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "rollback",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "sendback",
+            "base": "",
+            "fields": [
+                {
+                    "name": "auditor",
+                    "type": "name"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setacceptor",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "acceptor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setauditor",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "action",
+                    "type": "string"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setdelay",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "delayday",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setfee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_fee_rate",
+                    "type": "float64"
+                },
+                {
+                    "name": "min_service_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "miner_fee",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "setlimit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "max_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "min_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "total_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "frequency_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "interval_limit",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setpartner",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "action",
+                    "type": "string"
+                },
+                {
+                    "name": "applicant",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "stat_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "min_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "total_limit",
+                    "type": "asset"
+                },
+                {
+                    "name": "frequency_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "interval_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "delayday",
+                    "type": "uint64"
+                },
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "acceptor",
+                    "type": "name"
+                },
+                {
+                    "name": "address_style",
+                    "type": "name"
+                },
+                {
+                    "name": "organization",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                },
+                {
+                    "name": "service_fee_rate",
+                    "type": "float64"
+                },
+                {
+                    "name": "min_service_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "miner_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "statistic_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "last_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "frequency",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total",
+                    "type": "asset"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "symbol_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym",
+                    "type": "symbol"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "unapprove",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "unlockall",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sym_code",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "organization",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "string"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "withdraw_ts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "trx_id",
+                    "type": "transaction_id_type"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "string"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "state",
+                    "type": "uint64"
+                },
+                {
+                    "name": "enable",
+                    "type": "bool"
+                },
+                {
+                    "name": "auditor",
+                    "type": "name"
+                },
+                {
+                    "name": "remote_trx_id",
+                    "type": "string"
+                },
+                {
+                    "name": "msg",
+                    "type": "string"
+                },
+                {
+                    "name": "create_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        }
+    ],
+    "types": [
+        {
+            "new_type_name": "transaction_id_type",
+            "type": "checksum256"
+        }
+    ],
+    "actions": [
+        {
+            "name": "applyaddr",
+            "type": "applyaddr",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "approve",
+            "type": "approve",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "assignaddr",
+            "type": "assignaddr",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "clear",
+            "type": "clear",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deposit",
+            "type": "deposit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "feedback",
+            "type": "feedback",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "issue",
+            "type": "issue",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "lockall",
+            "type": "lockall",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "retire",
+            "type": "retire",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmwithdraw",
+            "type": "rmwithdraw",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rollback",
+            "type": "rollback",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sendback",
+            "type": "sendback",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setacceptor",
+            "type": "setacceptor",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setauditor",
+            "type": "setauditor",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setdelay",
+            "type": "setdelay",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setfee",
+            "type": "setfee",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setlimit",
+            "type": "setlimit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setpartner",
+            "type": "setpartner",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unapprove",
+            "type": "unapprove",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unlockall",
+            "type": "unlockall",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "withdraw",
+            "type": "withdraw",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "account_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "addrs",
+            "type": "addr_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "applicants",
+            "type": "applicant_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "auditors",
+            "type": "auditor_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "deposits",
+            "type": "deposit_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "operates",
+            "type": "operate_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "statistics",
+            "type": "statistic_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stats",
+            "type": "stat_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "symbols",
+            "type": "symbol_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "withdraws",
+            "type": "withdraw_ts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
