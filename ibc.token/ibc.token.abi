@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Jan 10 14:59:17 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Jan 15 14:28:06 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -209,6 +209,18 @@
                     "type": "float64"
                 },
                 {
+                    "name": "failed_fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "failed_fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "failed_fee_ratio",
+                    "type": "float64"
+                },
+                {
                     "name": "total_transfer",
                     "type": "asset"
                 },
@@ -305,6 +317,18 @@
                     "type": "name"
                 },
                 {
+                    "name": "failed_fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "failed_fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "failed_fee_ratio",
+                    "type": "float64"
+                },
+                {
                     "name": "total_issue",
                     "type": "asset"
                 },
@@ -375,6 +399,11 @@
             ]
         },
         {
+            "name": "fcinittxtbs",
+            "base": "",
+            "fields": []
+        },
+        {
             "name": "fcrmorigtrx",
             "base": "",
             "fields": [
@@ -434,6 +463,10 @@
             "fields": [
                 {
                     "name": "ibc_chain_contract",
+                    "type": "name"
+                },
+                {
+                    "name": "peerchain_name",
                     "type": "name"
                 },
                 {
@@ -564,6 +597,18 @@
                     "type": "float64"
                 },
                 {
+                    "name": "failed_fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "failed_fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "failed_fee_ratio",
+                    "type": "float64"
+                },
+                {
                     "name": "active",
                     "type": "bool"
                 },
@@ -608,6 +653,18 @@
                 {
                     "name": "peerchain_sym",
                     "type": "symbol"
+                },
+                {
+                    "name": "failed_fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "failed_fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "failed_fee_ratio",
+                    "type": "float64"
                 },
                 {
                     "name": "active",
@@ -693,15 +750,19 @@
                     "type": "name"
                 },
                 {
-                    "name": "service_fee_mode",
+                    "name": "kind",
                     "type": "name"
                 },
                 {
-                    "name": "service_fee_fixed",
+                    "name": "fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "fee_fixed",
                     "type": "asset"
                 },
                 {
-                    "name": "service_fee_ratio",
+                    "name": "fee_ratio",
                     "type": "float64"
                 }
             ]
@@ -748,6 +809,10 @@
             "fields": [
                 {
                     "name": "ibc_chain_contract",
+                    "type": "name"
+                },
+                {
+                    "name": "peerchain_name",
                     "type": "name"
                 },
                 {
@@ -823,6 +888,28 @@
                 {
                     "name": "value",
                     "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setpegtkfee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "symcode",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "fee_ratio",
+                    "type": "float64"
                 }
             ]
         },
@@ -960,6 +1047,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "fcinittxtbs",
+            "type": "fcinittxtbs",
+            "ricardian_contract": ""
+        },
+        {
             "name": "fcrmorigtrx",
             "type": "fcrmorigtrx",
             "ricardian_contract": ""
@@ -1047,6 +1139,11 @@
         {
             "name": "setpegint",
             "type": "setpegint",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setpegtkfee",
+            "type": "setpegtkfee",
             "ricardian_contract": ""
         },
         {

@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Jan 10 14:59:09 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Jan 15 14:27:51 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -143,12 +143,12 @@
             "base": "",
             "fields": [
                 {
-                    "name": "_node_count",
-                    "type": "uint64"
-                },
-                {
                     "name": "_active_nodes",
                     "type": "digest_type[]"
+                },
+                {
+                    "name": "_node_count",
+                    "type": "uint64"
                 }
             ]
         },
