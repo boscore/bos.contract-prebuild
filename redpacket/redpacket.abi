@@ -1,0 +1,231 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Feb 28 18:54:21 2019",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "claim_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "sig_hash",
+                    "type": "uint32"
+                },
+                {
+                    "name": "is_create",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "clear",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "owner_key",
+                    "type": "public_key"
+                },
+                {
+                    "name": "active_key",
+                    "type": "public_key"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sig",
+                    "type": "signature"
+                }
+            ]
+        },
+        {
+            "name": "get",
+            "base": "",
+            "fields": [
+                {
+                    "name": "receiver",
+                    "type": "name"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sig",
+                    "type": "signature"
+                }
+            ]
+        },
+        {
+            "name": "global",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "caller",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "ping",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "redpacket_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "sender",
+                    "type": "name"
+                },
+                {
+                    "name": "pubkey",
+                    "type": "public_key"
+                },
+                {
+                    "name": "greetings",
+                    "type": "string"
+                },
+                {
+                    "name": "expire",
+                    "type": "uint32"
+                },
+                {
+                    "name": "claims",
+                    "type": "claim_info[]"
+                }
+            ]
+        },
+        {
+            "name": "remove",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setcaller",
+            "base": "",
+            "fields": [
+                {
+                    "name": "caller",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "stats",
+            "base": "",
+            "fields": [
+                {
+                    "name": "total_num",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_value",
+                    "type": "asset"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "clear",
+            "type": "clear",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "get",
+            "type": "get",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ping",
+            "type": "ping",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "remove",
+            "type": "remove",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcaller",
+            "type": "setcaller",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "global",
+            "type": "global",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "redpacket",
+            "type": "redpacket_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stats",
+            "type": "stats",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
