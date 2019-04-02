@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Feb 28 18:54:18 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Apr  2 07:48:11 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -9,6 +9,26 @@
                 {
                     "name": "balance",
                     "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "account_blacklist",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "addblacklist",
+            "base": "",
+            "fields": [
+                {
+                    "name": "accounts",
+                    "type": "name[]"
                 }
             ]
         },
@@ -109,6 +129,16 @@
             ]
         },
         {
+            "name": "rmblacklist",
+            "base": "",
+            "fields": [
+                {
+                    "name": "accounts",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
             "name": "transfer",
             "base": "",
             "fields": [
@@ -133,6 +163,11 @@
     ],
     "types": [],
     "actions": [
+        {
+            "name": "addblacklist",
+            "type": "addblacklist",
+            "ricardian_contract": ""
+        },
         {
             "name": "close",
             "type": "close",
@@ -159,6 +194,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "rmblacklist",
+            "type": "rmblacklist",
+            "ricardian_contract": ""
+        },
+        {
             "name": "transfer",
             "type": "transfer",
             "ricardian_contract": ""
@@ -168,6 +208,13 @@
         {
             "name": "accounts",
             "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "blacklist",
+            "type": "account_blacklist",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
