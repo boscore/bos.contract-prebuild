@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Apr 18 06:10:12 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue May  7 04:26:31 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -1381,6 +1381,16 @@
             ]
         },
         {
+            "name": "setupgrade",
+            "base": "",
+            "fields": [
+                {
+                    "name": "up",
+                    "type": "upgrade_proposal"
+                }
+            ]
+        },
+        {
             "name": "undelegatebw",
             "base": "",
             "fields": [
@@ -1491,6 +1501,26 @@
                 {
                     "name": "revision",
                     "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "upgrade_proposal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "target_block_num",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "upgrade_state",
+            "base": "",
+            "fields": [
+                {
+                    "name": "target_block_num",
+                    "type": "uint32"
                 }
             ]
         },
@@ -1842,6 +1872,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "setupgrade",
+            "type": "setupgrade",
+            "ricardian_contract": ""
+        },
+        {
             "name": "undelegatebw",
             "type": "undelegatebw",
             "ricardian_contract": ""
@@ -2010,6 +2045,13 @@
         {
             "name": "rexqueue",
             "type": "rex_order",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "upgrade",
+            "type": "upgrade_state",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
