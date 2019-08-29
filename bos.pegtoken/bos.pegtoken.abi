@@ -1,6 +1,12 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue May  7 04:26:17 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
     "version": "eosio::abi/1.1",
+    "types": [
+        {
+            "new_type_name": "transaction_id_type",
+            "type": "checksum256"
+        }
+    ],
     "structs": [
         {
             "name": "account_ts",
@@ -743,12 +749,6 @@
             ]
         }
     ],
-    "types": [
-        {
-            "new_type_name": "transaction_id_type",
-            "type": "checksum256"
-        }
-    ],
     "actions": [
         {
             "name": "applyaddr",
@@ -944,6 +944,5 @@
         }
     ],
     "ricardian_clauses": [],
-    "variants": [],
-    "abi_extensions": []
+    "variants": []
 }

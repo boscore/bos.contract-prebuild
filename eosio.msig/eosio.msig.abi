@@ -1,7 +1,30 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue May  7 04:26:13 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
     "version": "eosio::abi/1.1",
+    "types": [],
     "structs": [
+        {
+            "name": "abstain",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proposer",
+                    "type": "name"
+                },
+                {
+                    "name": "proposal_name",
+                    "type": "name"
+                },
+                {
+                    "name": "level",
+                    "type": "permission_level"
+                },
+                {
+                    "name": "proposal_hash",
+                    "type": "checksum256$"
+                }
+            ]
+        },
         {
             "name": "action",
             "base": "",
@@ -175,6 +198,46 @@
             ]
         },
         {
+            "name": "oppose",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proposer",
+                    "type": "name"
+                },
+                {
+                    "name": "proposal_name",
+                    "type": "name"
+                },
+                {
+                    "name": "level",
+                    "type": "permission_level"
+                },
+                {
+                    "name": "proposal_hash",
+                    "type": "checksum256$"
+                }
+            ]
+        },
+        {
+            "name": "opposes_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proposal_name",
+                    "type": "name"
+                },
+                {
+                    "name": "opposed_approvals",
+                    "type": "permission_level[]"
+                },
+                {
+                    "name": "abstained_approvals",
+                    "type": "permission_level[]"
+                }
+            ]
+        },
+        {
             "name": "permission_level",
             "base": "",
             "fields": [
@@ -273,7 +336,43 @@
             ]
         },
         {
+            "name": "unabstain",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proposer",
+                    "type": "name"
+                },
+                {
+                    "name": "proposal_name",
+                    "type": "name"
+                },
+                {
+                    "name": "level",
+                    "type": "permission_level"
+                }
+            ]
+        },
+        {
             "name": "unapprove",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proposer",
+                    "type": "name"
+                },
+                {
+                    "name": "proposal_name",
+                    "type": "name"
+                },
+                {
+                    "name": "level",
+                    "type": "permission_level"
+                }
+            ]
+        },
+        {
+            "name": "unoppose",
             "base": "",
             "fields": [
                 {
@@ -291,8 +390,12 @@
             ]
         }
     ],
-    "types": [],
     "actions": [
+        {
+            "name": "abstain",
+            "type": "abstain",
+            "ricardian_contract": ""
+        },
         {
             "name": "approve",
             "type": "approve",
@@ -314,13 +417,28 @@
             "ricardian_contract": ""
         },
         {
+            "name": "oppose",
+            "type": "oppose",
+            "ricardian_contract": ""
+        },
+        {
             "name": "propose",
             "type": "propose",
             "ricardian_contract": ""
         },
         {
+            "name": "unabstain",
+            "type": "unabstain",
+            "ricardian_contract": ""
+        },
+        {
             "name": "unapprove",
             "type": "unapprove",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unoppose",
+            "type": "unoppose",
             "ricardian_contract": ""
         }
     ],
@@ -347,6 +465,13 @@
             "key_types": []
         },
         {
+            "name": "opposes",
+            "type": "opposes_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
             "name": "proposal",
             "type": "proposal",
             "index_type": "i64",
@@ -355,6 +480,5 @@
         }
     ],
     "ricardian_clauses": [],
-    "variants": [],
-    "abi_extensions": []
+    "variants": []
 }
