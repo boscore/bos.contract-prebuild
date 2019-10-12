@@ -1,0 +1,77 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "dream",
+            "base": "",
+            "fields": [
+                {
+                    "name": "who",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "fetchdata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "oracle",
+                    "type": "name"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "reality",
+            "base": "",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "asset"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "dream",
+            "type": "dream",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "fetchdata",
+            "type": "fetchdata",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reality",
+            "type": "reality",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "variants": []
+}

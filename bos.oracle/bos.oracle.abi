@@ -1,0 +1,1580 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "acceptarbi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitrator",
+                    "type": "name"
+                },
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "account_freeze_stat",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "addfeetypes",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "fee_types",
+                    "type": "uint8[]"
+                },
+                {
+                    "name": "service_prices",
+                    "type": "asset[]"
+                }
+            ]
+        },
+        {
+            "name": "appeal_request",
+            "base": "",
+            "fields": [
+                {
+                    "name": "appellant",
+                    "type": "name"
+                },
+                {
+                    "name": "reason",
+                    "type": "string"
+                },
+                {
+                    "name": "role_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "appeal_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_case",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "arbi_step",
+                    "type": "uint8"
+                },
+                {
+                    "name": "arbitration_result",
+                    "type": "uint8"
+                },
+                {
+                    "name": "last_round",
+                    "type": "uint8"
+                },
+                {
+                    "name": "final_result",
+                    "type": "uint8"
+                },
+                {
+                    "name": "answer_arbitrators",
+                    "type": "name[]"
+                },
+                {
+                    "name": "chosen_arbitrators",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_evidence",
+            "base": "",
+            "fields": [
+                {
+                    "name": "evidence_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "round",
+                    "type": "uint8"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "evidence_info",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_income_account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "income",
+                    "type": "asset"
+                },
+                {
+                    "name": "claim",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_process",
+            "base": "",
+            "fields": [
+                {
+                    "name": "round",
+                    "type": "uint8"
+                },
+                {
+                    "name": "required_arbitrator",
+                    "type": "uint8"
+                },
+                {
+                    "name": "increment_arbitrator",
+                    "type": "uint8"
+                },
+                {
+                    "name": "appellants",
+                    "type": "name[]"
+                },
+                {
+                    "name": "respondents",
+                    "type": "name[]"
+                },
+                {
+                    "name": "answer_arbitrators",
+                    "type": "name[]"
+                },
+                {
+                    "name": "invited_arbitrators",
+                    "type": "name[]"
+                },
+                {
+                    "name": "role_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "arbitrator_arbitration_results",
+                    "type": "uint8[]"
+                },
+                {
+                    "name": "arbitration_result",
+                    "type": "uint8"
+                },
+                {
+                    "name": "arbi_method",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_result",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitrator",
+                    "type": "name"
+                },
+                {
+                    "name": "result",
+                    "type": "uint8"
+                },
+                {
+                    "name": "comment",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_stake_account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "role_type",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "arbitration_stake_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "stake_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "arbitrator",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "arbitration_correct_times",
+                    "type": "uint16"
+                },
+                {
+                    "name": "arbitration_times",
+                    "type": "uint16"
+                },
+                {
+                    "name": "invitations",
+                    "type": "uint16"
+                },
+                {
+                    "name": "responses",
+                    "type": "uint16"
+                },
+                {
+                    "name": "uncommitted_arbitration_result_times",
+                    "type": "uint16"
+                },
+                {
+                    "name": "public_info",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "claim",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "receive_account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "claimarbi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "receive_account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "cleardata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "time_length",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "data_provider",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "total_stake_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "total_freeze_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "unconfirmed_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "claim_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "last_claim_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "services",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "data_service",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "injection_method",
+                    "type": "uint8"
+                },
+                {
+                    "name": "acceptance",
+                    "type": "uint8"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "provider_limit",
+                    "type": "uint8"
+                },
+                {
+                    "name": "update_cycle",
+                    "type": "uint32"
+                },
+                {
+                    "name": "last_update_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "appeal_freeze_period",
+                    "type": "uint64"
+                },
+                {
+                    "name": "exceeded_risk_control_freeze_period",
+                    "type": "uint64"
+                },
+                {
+                    "name": "guarantee_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "base_stake_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "risk_control_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "pause_service_stake_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "data_format",
+                    "type": "string"
+                },
+                {
+                    "name": "criteria",
+                    "type": "string"
+                },
+                {
+                    "name": "update_start_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "data_service_fee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "fee_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "service_price",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "data_service_provision",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "freeze_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "service_income",
+                    "type": "asset"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "public_information",
+                    "type": "string"
+                },
+                {
+                    "name": "create_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "data_service_provision_log",
+            "base": "",
+            "fields": [
+                {
+                    "name": "log_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "data_service_request",
+            "base": "",
+            "fields": [
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "requester",
+                    "type": "name"
+                },
+                {
+                    "name": "request_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "request_content",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "data_service_stake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "freeze_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "unconfirmed_amount",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "data_service_subscription",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "payment",
+                    "type": "asset"
+                },
+                {
+                    "name": "consumption",
+                    "type": "asset"
+                },
+                {
+                    "name": "month_consumption",
+                    "type": "asset"
+                },
+                {
+                    "name": "payment_method",
+                    "type": "uint8"
+                },
+                {
+                    "name": "last_payment_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "subscription_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "deposit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                },
+                {
+                    "name": "is_notify",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "execaction",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "action_type",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "fair_award",
+            "base": "",
+            "fields": [
+                {
+                    "name": "award_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "arbitrator_evidence",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "importwps",
+            "base": "",
+            "fields": [
+                {
+                    "name": "auditors",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
+            "name": "oracle_data_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "record_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "oracle_id",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "oraclepush",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "provider_push_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "times",
+                    "type": "uint64"
+                },
+                {
+                    "name": "month_times",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "push_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "times",
+                    "type": "uint64"
+                },
+                {
+                    "name": "month_times",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pushdata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "regservice",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "base_stake_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "data_format",
+                    "type": "string"
+                },
+                {
+                    "name": "data_type",
+                    "type": "uint8"
+                },
+                {
+                    "name": "criteria",
+                    "type": "string"
+                },
+                {
+                    "name": "acceptance",
+                    "type": "uint8"
+                },
+                {
+                    "name": "injection_method",
+                    "type": "uint8"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "provider_limit",
+                    "type": "uint8"
+                },
+                {
+                    "name": "update_cycle",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "requestdata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                },
+                {
+                    "name": "requester",
+                    "type": "name"
+                },
+                {
+                    "name": "request_content",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "risk_guarantee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "risk_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "start_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "riskcontrol_account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "service_consumption",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "consumption",
+                    "type": "asset"
+                },
+                {
+                    "name": "month_consumption",
+                    "type": "asset"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "service_freeze_stat",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "setstatus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "starttimer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "request_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "subscribe",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract_account",
+                    "type": "name"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "svc_provision_cancel_apply",
+            "base": "",
+            "fields": [
+                {
+                    "name": "apply_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "update_time",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "timertimeout",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "round",
+                    "type": "uint8"
+                },
+                {
+                    "name": "timer_type",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "transfer_freeze_delay",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transfer_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "start_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "type",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "unregservice",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "unstakearbi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "unstakeasset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "uploadeviden",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "evidence",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "uploadresult",
+            "base": "",
+            "fields": [
+                {
+                    "name": "arbitrator",
+                    "type": "name"
+                },
+                {
+                    "name": "arbitration_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "result",
+                    "type": "uint8"
+                },
+                {
+                    "name": "comment",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "acceptarbi",
+            "type": "acceptarbi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addfeetypes",
+            "type": "addfeetypes",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "claim",
+            "type": "claim",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "claimarbi",
+            "type": "claimarbi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cleardata",
+            "type": "cleardata",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deposit",
+            "type": "deposit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "execaction",
+            "type": "execaction",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "importwps",
+            "type": "importwps",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "oraclepush",
+            "type": "oraclepush",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pushdata",
+            "type": "pushdata",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regservice",
+            "type": "regservice",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "requestdata",
+            "type": "requestdata",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setstatus",
+            "type": "setstatus",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "starttimer",
+            "type": "starttimer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "subscribe",
+            "type": "subscribe",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "timertimeout",
+            "type": "timertimeout",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unregservice",
+            "type": "unregservice",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unstakearbi",
+            "type": "unstakearbi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unstakeasset",
+            "type": "unstakeasset",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "uploadeviden",
+            "type": "uploadeviden",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "uploadresult",
+            "type": "uploadresult",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "withdraw",
+            "type": "withdraw",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "appealreq",
+            "type": "appeal_request",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbicase",
+            "type": "arbitration_case",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbievidence",
+            "type": "arbitration_evidence",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbiincomes",
+            "type": "arbitration_income_account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbiprocess",
+            "type": "arbitration_process",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbiresults",
+            "type": "arbitration_result",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbistakeacc",
+            "type": "arbitration_stake_account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbistakes",
+            "type": "arbitration_stake_record",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "arbitrators",
+            "type": "arbitrator",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "cancelapplys",
+            "type": "svc_provision_cancel_apply",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "consumptions",
+            "type": "service_consumption",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "dataservices",
+            "type": "data_service",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "fairawards",
+            "type": "fair_award",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "freezedelays",
+            "type": "transfer_freeze_delay",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "freezestats",
+            "type": "account_freeze_stat",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "oracledata",
+            "type": "oracle_data_record",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "oracleids",
+            "type": "oracle_id",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "ppushrecords",
+            "type": "provider_push_record",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "providers",
+            "type": "data_provider",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "provisionlog",
+            "type": "data_service_provision_log",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "pushrecords",
+            "type": "push_record",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "request",
+            "type": "data_service_request",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "riskaccounts",
+            "type": "riskcontrol_account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "riskguarante",
+            "type": "risk_guarantee",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "servicefees",
+            "type": "data_service_fee",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "servicestake",
+            "type": "data_service_stake",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "subscription",
+            "type": "data_service_subscription",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "svcfrozestat",
+            "type": "service_freeze_stat",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "svcprovision",
+            "type": "data_service_provision",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
