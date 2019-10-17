@@ -404,7 +404,7 @@
                     "type": "uint32"
                 },
                 {
-                    "name": "last_update_number",
+                    "name": "last_cycle_number",
                     "type": "uint64"
                 },
                 {
@@ -762,6 +762,106 @@
             ]
         },
         {
+            "name": "oracle_meta_parameters",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "parameters_data",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "oracle_parameters",
+            "base": "",
+            "fields": [
+                {
+                    "name": "core_symbol",
+                    "type": "string"
+                },
+                {
+                    "name": "precision",
+                    "type": "uint8"
+                },
+                {
+                    "name": "min_service_stake_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "min_appeal_stake_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "min_reg_arbitrator_stake_limit",
+                    "type": "uint64"
+                },
+                {
+                    "name": "arbitration_correct_rate",
+                    "type": "uint16"
+                },
+                {
+                    "name": "round_limit",
+                    "type": "uint8"
+                },
+                {
+                    "name": "arbi_timeout_value",
+                    "type": "uint32"
+                },
+                {
+                    "name": "arbi_freeze_stake_duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "time_deadline",
+                    "type": "uint32"
+                },
+                {
+                    "name": "clear_data_time_length",
+                    "type": "uint32"
+                },
+                {
+                    "name": "max_data_size",
+                    "type": "uint16"
+                },
+                {
+                    "name": "min_provider_limit",
+                    "type": "uint16"
+                },
+                {
+                    "name": "max_provider_limit",
+                    "type": "uint16"
+                },
+                {
+                    "name": "min_update_cycle",
+                    "type": "uint32"
+                },
+                {
+                    "name": "max_update_cycle",
+                    "type": "uint32"
+                },
+                {
+                    "name": "min_duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "max_duration",
+                    "type": "uint32"
+                },
+                {
+                    "name": "min_acceptance",
+                    "type": "uint16"
+                },
+                {
+                    "name": "max_acceptance",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
             "name": "oraclepush",
             "base": "",
             "fields": [
@@ -990,6 +1090,20 @@
                 {
                     "name": "amount",
                     "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "setparameter",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "parameters",
+                    "type": "oracle_parameters"
                 }
             ]
         },
@@ -1320,6 +1434,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "setparameter",
+            "type": "setparameter",
+            "ricardian_contract": ""
+        },
+        {
             "name": "setstatus",
             "type": "setstatus",
             "ricardian_contract": ""
@@ -1472,6 +1591,13 @@
         {
             "name": "freezestats",
             "type": "account_freeze_stat",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "metaparams",
+            "type": "oracle_meta_parameters",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
