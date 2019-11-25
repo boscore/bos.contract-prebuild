@@ -920,6 +920,20 @@
             ]
         },
         {
+            "name": "refundburn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "executer",
+                    "type": "name"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "regproducer",
             "base": "",
             "fields": [
@@ -1392,6 +1406,32 @@
             ]
         },
         {
+            "name": "undelegatebs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "executer",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "receiver",
+                    "type": "name"
+                },
+                {
+                    "name": "unstake_net_quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "unstake_cpu_quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
             "name": "undelegatebw",
             "base": "",
             "fields": [
@@ -1772,6 +1812,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "refundburn",
+            "type": "refundburn",
+            "ricardian_contract": ""
+        },
+        {
             "name": "regproducer",
             "type": "regproducer",
             "ricardian_contract": ""
@@ -1874,6 +1919,11 @@
         {
             "name": "setupgrade",
             "type": "setupgrade",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "undelegatebs",
+            "type": "undelegatebs",
             "ricardian_contract": ""
         },
         {

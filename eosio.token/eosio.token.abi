@@ -34,6 +34,28 @@
             ]
         },
         {
+            "name": "burn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "executer",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "name": "close",
             "base": "",
             "fields": [
@@ -160,12 +182,43 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "name": "transferburn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "executer",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
         }
     ],
     "actions": [
         {
             "name": "addblacklist",
             "type": "addblacklist",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "burn",
+            "type": "burn",
             "ricardian_contract": ""
         },
         {
@@ -201,6 +254,11 @@
         {
             "name": "transfer",
             "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transferburn",
+            "type": "transferburn",
             "ricardian_contract": ""
         }
     ],

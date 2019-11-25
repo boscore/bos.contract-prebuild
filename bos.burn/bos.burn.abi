@@ -1,0 +1,167 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "burn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "clear",
+            "base": "",
+            "fields": [
+                {
+                    "name": "clear_accounts",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
+            "name": "importacnts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "unactivated_airdrop_accounts",
+                    "type": "pair_name_asset[]"
+                }
+            ]
+        },
+        {
+            "name": "meta_parameters",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "executer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "pair_name_asset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "first",
+                    "type": "name"
+                },
+                {
+                    "name": "second",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "setparameter",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "executer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "transferair",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "transferairs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "unactivated_airdrop_account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "is_burned",
+                    "type": "uint8"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "burn",
+            "type": "burn",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "clear",
+            "type": "clear",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "importacnts",
+            "type": "importacnts",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setparameter",
+            "type": "setparameter",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transferair",
+            "type": "transferair",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transferairs",
+            "type": "transferairs",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "unactivated_airdrop_account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "metaparams",
+            "type": "meta_parameters",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
