@@ -766,11 +766,11 @@
             "base": "",
             "fields": [
                 {
-                    "name": "first",
+                    "name": "key",
                     "type": "time_point_sec"
                 },
                 {
-                    "name": "second",
+                    "name": "value",
                     "type": "int64"
                 }
             ]
@@ -1154,6 +1154,54 @@
                 {
                     "name": "loan_num",
                     "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "rex_return_buckets",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "return_buckets",
+                    "type": "pair_time_point_sec_int64[]"
+                }
+            ]
+        },
+        {
+            "name": "rex_return_pool",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "uint8"
+                },
+                {
+                    "name": "last_dist_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "pending_bucket_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "oldest_bucket_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "pending_bucket_proceeds",
+                    "type": "int64"
+                },
+                {
+                    "name": "current_rate_of_increase",
+                    "type": "int64"
+                },
+                {
+                    "name": "proceeds",
+                    "type": "int64"
                 }
             ]
         },
@@ -2022,6 +2070,13 @@
             "key_types": []
         },
         {
+            "name": "retbuckets",
+            "type": "rex_return_buckets",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
             "name": "rexbal",
             "type": "rex_balance",
             "index_type": "i64",
@@ -2045,6 +2100,13 @@
         {
             "name": "rexqueue",
             "type": "rex_order",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "rexretpool",
+            "type": "rex_return_pool",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
