@@ -1063,20 +1063,6 @@
             "name": "unlockall",
             "base": "",
             "fields": []
-        },
-        {
-            "name": "unregtoken",
-            "base": "",
-            "fields": [
-                {
-                    "name": "table",
-                    "type": "name"
-                },
-                {
-                    "name": "sym_code",
-                    "type": "symbol_code"
-                }
-            ]
         }
     ],
     "actions": [
@@ -1208,11 +1194,6 @@
         {
             "name": "unlockall",
             "type": "unlockall",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "unregtoken",
-            "type": "unregtoken",
             "ricardian_contract": ""
         }
     ],
