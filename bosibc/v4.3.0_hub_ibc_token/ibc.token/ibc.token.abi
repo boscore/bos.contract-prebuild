@@ -473,6 +473,28 @@
             ]
         },
         {
+            "name": "feetransfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "name": "forceinit",
             "base": "",
             "fields": [
@@ -493,6 +515,104 @@
                 {
                     "name": "active",
                     "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "hub_globals",
+            "base": "",
+            "fields": [
+                {
+                    "name": "is_open",
+                    "type": "bool"
+                },
+                {
+                    "name": "hub_account",
+                    "type": "name"
+                },
+                {
+                    "name": "unfinished_trxs",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "hub_trx_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "cash_seq_num",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cash_time_slot",
+                    "type": "uint64"
+                },
+                {
+                    "name": "from_chain",
+                    "type": "name"
+                },
+                {
+                    "name": "from_account",
+                    "type": "name"
+                },
+                {
+                    "name": "from_quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "mini_to_quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "orig_trx_id",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "to_chain",
+                    "type": "name"
+                },
+                {
+                    "name": "to_account",
+                    "type": "name"
+                },
+                {
+                    "name": "orig_pure_memo",
+                    "type": "string"
+                },
+                {
+                    "name": "to_quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "fee_receiver",
+                    "type": "name"
+                },
+                {
+                    "name": "hub_trx_id",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "hub_trx_time_slot",
+                    "type": "uint64"
+                },
+                {
+                    "name": "forward_times",
+                    "type": "uint8"
+                },
+                {
+                    "name": "backward_times",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "hubinit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "hub_account",
+                    "type": "name"
                 }
             ]
         },
@@ -776,6 +896,72 @@
                 {
                     "name": "administrator",
                     "type": "name"
+                },
+                {
+                    "name": "failed_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "regpegtoken2",
+            "base": "",
+            "fields": [
+                {
+                    "name": "peerchain_name",
+                    "type": "name"
+                },
+                {
+                    "name": "peerchain_contract",
+                    "type": "name"
+                },
+                {
+                    "name": "max_supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "min_once_transfer",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_once_transfer",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_daily_transfer",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_tfs_per_minute",
+                    "type": "uint32"
+                },
+                {
+                    "name": "organization",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                },
+                {
+                    "name": "administrator",
+                    "type": "name"
+                },
+                {
+                    "name": "service_fee_mode",
+                    "type": "name"
+                },
+                {
+                    "name": "service_fee_fixed",
+                    "type": "asset"
+                },
+                {
+                    "name": "service_fee_ratio",
+                    "type": "float64"
                 },
                 {
                     "name": "failed_fee",
@@ -1154,8 +1340,18 @@
             "ricardian_contract": ""
         },
         {
+            "name": "feetransfer",
+            "type": "feetransfer",
+            "ricardian_contract": ""
+        },
+        {
             "name": "forceinit",
             "type": "forceinit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "hubinit",
+            "type": "hubinit",
             "ricardian_contract": ""
         },
         {
@@ -1181,6 +1377,11 @@
         {
             "name": "regpegtoken",
             "type": "regpegtoken",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regpegtoken2",
+            "type": "regpegtoken2",
             "ricardian_contract": ""
         },
         {
@@ -1320,6 +1521,20 @@
         {
             "name": "globals",
             "type": "global_state",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "hubgs",
+            "type": "hub_globals",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "hubtrxs",
+            "type": "hub_trx_info",
             "index_type": "i64",
             "key_names": [],
             "key_types": []

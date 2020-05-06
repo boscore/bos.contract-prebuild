@@ -25,6 +25,16 @@
     ],
     "structs": [
         {
+            "name": "admin_struct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "admin",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "block_header",
             "base": "",
             "fields": [
@@ -333,6 +343,16 @@
             ]
         },
         {
+            "name": "setadmin",
+            "base": "",
+            "fields": [
+                {
+                    "name": "admin",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "setglobal",
             "base": "",
             "fields": [
@@ -412,12 +432,24 @@
             "ricardian_contract": ""
         },
         {
+            "name": "setadmin",
+            "type": "setadmin",
+            "ricardian_contract": ""
+        },
+        {
             "name": "setglobal",
             "type": "setglobal",
             "ricardian_contract": ""
         }
     ],
     "tables": [
+        {
+            "name": "admin",
+            "type": "admin_struct",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
         {
             "name": "chaindb",
             "type": "block_header_state",
