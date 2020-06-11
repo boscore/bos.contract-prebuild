@@ -367,6 +367,14 @@
                 {
                     "name": "consensus_algo",
                     "type": "name"
+                },
+                {
+                    "name": "wtmsig_activated",
+                    "type": "bool"
+                },
+                {
+                    "name": "wtmsig_ext_id",
+                    "type": "uint32"
                 }
             ]
         },
@@ -391,6 +399,20 @@
                 {
                     "name": "field_1",
                     "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "wtmsig_struct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "activated",
+                    "type": "bool"
+                },
+                {
+                    "name": "ext_id",
+                    "type": "uint16"
                 }
             ]
         }
@@ -488,6 +510,13 @@
         {
             "name": "sections",
             "type": "section_type",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "wtmsig",
+            "type": "wtmsig_struct",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
